@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IPE San Luis Ilo</title>
   <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/foundation.css">
-
+  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/header.css">
   <!-- If you are using the gem version, you need this only -->
 
   <!-- Insert this within your head tag and after foundation.css -->
