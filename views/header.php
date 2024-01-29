@@ -7,6 +7,7 @@
   <title>IPE San Luis Ilo</title>
   <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/foundation.css">
   <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/header.css">
+
   <!-- If you are using the gem version, you need this only -->
 
   <!-- Insert this within your head tag and after foundation.css -->
@@ -19,24 +20,26 @@
 
 <body>
 
-  <div class="header">
-    <div>
-      <a href="<?php echo constant('URL'); ?>main">
-        <img src="<?php echo constant('URL'); ?>public/img/logo.jpg" alt="Logo IEP San Luis" class="img-logo">
-
-      </a>
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-3">
+        <a href="<?php echo constant('URL'); ?>main">
+          <img src="<?php echo constant('URL'); ?>public/img/logo.jpg" alt="Logo IEP San Luis" class="img-logo">
+        </a>
+      </div>
+      <div class="cell small-9" style="background-image: url('<?php echo constant('URL'); ?>public/img/menu.png') ;">
+        <nav class="navegador">
+          <ul>
+            <li><a href="<?php echo constant('URL'); ?>main">Inicio</a></li>
+            <li><a href="<?php echo constant('URL'); ?>nosotros">Nosotros</a></li>
+            <li><a href="<?php echo constant('URL'); ?>propuesta">Propuesta educativa</a></li>
+            <li><a href="<?php echo constant('URL'); ?>galeria">Galeria</a></li>
+            <li class="activate"><a href="<?php echo constant('URL'); ?>contacto">
+                <i class="fa-solid fa-phone"></i>
+                Contacto
+              </a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="<?php echo constant('URL'); ?>main">Inicio</a></li>
-        <li><a href="<?php echo constant('URL'); ?>nosotros">Nosotros</a></li>
-        <li><a href="<?php echo constant('URL'); ?>propuesta">Propuesta educativa</a></li>
-        <li><a href="<?php echo constant('URL'); ?>galeria">Galeria</a></li>
-        <li class="activate"><a href="<?php echo constant('URL'); ?>contacto">
-            <i class="fa-solid fa-phone"></i>
-            Contacto
-          </a></li>
-      </ul>
-    </nav>
-
   </div>
