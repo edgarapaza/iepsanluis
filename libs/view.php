@@ -1,8 +1,11 @@
 <?php
-
+namespace iepsanluis\libs\view;
+use iepsanluis\config\config;
 class View
 {
   public $mensaje;
+  public $modulo;
+  public $datos;
 
   function __construct()
   {
@@ -11,6 +14,6 @@ class View
 
   function Render($nombre)
   {
-    require 'views/' . $nombre . '.php';
+    require $this->modulo.'/views/' . $nombre . '.php';
   }
 }

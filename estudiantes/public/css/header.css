@@ -1,0 +1,33 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.img-logo {
+  width: 70px;
+}
+
+.navegador {
+  height: 50px;
+}
+.navegador ul {
+  text-align: center;
+  margin-top: 40px;
+}
+.navegador ul li {
+  display: inline-block;
+  padding-left: 50px;
+  list-style: none;
+}
+.navegador ul li a {
+  color: white;
+}
+
+.img-hero {
+  margin-top: 5px;
+  border: 1px solid skyblue;
+  width: 1170px;
+  height: 350px;
+}
+
+/*# sourceMappingURL=header.css.map */
