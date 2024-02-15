@@ -3,8 +3,8 @@
 <br>
 <div class="grid-container">
 <div class="large text-center">
-  <h1>CONTACTO</h1>
-  <!-- <img src="./public/img/contacto.jpg" alt=""> -->
+  <h1>CONTACTANOS</h1>
+   <!-- <img src="./public/img/bienvenidos.jpg" alt=""> -->
 </div>
 
 <div class="grid-x">
@@ -55,7 +55,7 @@
         <td>
           <p>
           <span class="icon-mail"></span>
-          @gmail.com.gob.pe
+          info@iepsanluis.edu.pe
           </p>
         </td>
       </tr>
