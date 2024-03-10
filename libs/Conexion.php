@@ -7,9 +7,9 @@ class Conexion
   function __construct()
   {
     $host = "localhost";
-    $user = "jersson";
-    $pass = "jersson";
-    $db   = "katariDB";
+    $user = "usuario";
+    $pass = "archivo123$";
+    $db   = "almacen";
 
     $this->conn = new \mysqli($host, $user, $pass, $db);
 

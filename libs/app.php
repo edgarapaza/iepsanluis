@@ -13,6 +13,7 @@ class App
     );
     // Verifica si hay un módulo especificado en la URL
     $modulo = (!empty($url[0])) ? $url[0] : 'main';
+
     if (empty($url[0]) && $modulo == "main") {
       $urlObject = "main";
       $this->cargarModulo($modulo, $url, $urlObject);
@@ -21,6 +22,7 @@ class App
       $urlObject = "main";
       $this->cargarModulo($modulo, $url, $urlObject);
     }
+
     if (!in_array($modulo, $modulosDisponibles)) {
       $archivoError = "main/controller/error.php";
       // Controlador no encontrado en el módulo, manejar error
@@ -66,7 +68,7 @@ class App
           break;
       }
     } else {
-      if (!empty($url[0]) && sizeof($url) == 1) {
+        if (!empty($url[0]) && sizeof($url) == 1) {
         $archivoController = "{$modulo}/controller/login.php";
         $urlObject = "login";
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
@@ -80,6 +82,7 @@ class App
       }
     }
   }
+
   function cargarModulo($modulo, $url, $urlObject)
   {
     if (empty($url[1])) {
