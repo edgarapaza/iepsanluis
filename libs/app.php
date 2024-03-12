@@ -72,11 +72,9 @@ class App
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
       }
       if (isset($url[2]) && $url[2] == "user") {
-        echo "user";
         $archivoController = "{$modulo}/controller/login.php";
         $urlObject = "login";
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
-        echo "carga el controlador";
       } else {
         header("location: " . constant('URL'));
       }
@@ -116,14 +114,12 @@ class App
   function cargarController($archivoController, $modulo, $url, $urlObject)
   {
     if (file_exists($archivoController)) {
-      echo "entra aqui si existe el archivo";
       require_once($archivoController);
       $controller = new $urlObject;
       $controller->view->modulo = $modulo;
       $controller->modulo = $modulo;
       /*verificar los metodos para manejar errores*/
       $metodosPublicos = get_class_methods($urlObject);
-      echo "verifica los metodos";
       if (!empty($url[2]) && !in_array($url[2], $metodosPublicos)) {
         $archivoError = "{$modulo}/controller/error.php";
         // Controlador no encontrado en el módulo, manejar error
@@ -133,10 +129,8 @@ class App
         $controller->render();
       }
       if (!empty($url[2]) && isset($url[2])) {
-        echo "<br>hay parametros";
-        $controller->loadModel($url[2]);
+        $controller->loadModel($url[1]);
         $nparam = sizeof($url);
-        echo "<br> carga el modelo";
         if ($nparam > 2) {
           if ($nparam > 3) {
             $param = [];
