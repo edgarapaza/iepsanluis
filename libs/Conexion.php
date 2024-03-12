@@ -6,10 +6,10 @@ class Conexion
 
   function __construct()
   {
-    $host = "localhost";
-    $user = "jersson";
-    $pass = "jersson";
-    $db   = "katariDB";
+    $host = constant('HOST');
+    $user = constant('USER');
+    $pass = constant('PASSWORD');
+    $db   = constant('HOST');
 
     $this->conn = new \mysqli($host, $user, $pass, $db);
 
@@ -17,8 +17,7 @@ class Conexion
       echo "Error al contenctar a MySQL: (" . $this->conn->connect_errno . ") " . $this->conn->connect_error;
       exit();
     }
-
-    #echo $this->conn->host_info . " ANTARES";
+    echo $this->conn->host_info . " colegio";
     return $this->conn;
   }
 

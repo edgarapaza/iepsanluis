@@ -12,7 +12,7 @@ define('URLMAIN', 'http://localhost/iepsanluis/main/');
 define('COMPANY', 'IEP San Luis');
 define('HOST', 'localhost');
 define('USER', 'jersson');
-define('DB', 'almacen');
+define('DB', 'katariDB');
 define('PASSWORD', 'jersson');
 define('CHATSET', 'utf8');
 
