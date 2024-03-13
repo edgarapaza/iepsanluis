@@ -5,7 +5,6 @@ class Login extends Controller
 
 	function __construct()
 	{
-		echo "<h1>Controlador Login</h1>";
 		parent::__construct();
 	}
 
@@ -16,19 +15,15 @@ class Login extends Controller
 	}
 	function user()
 	{   
-
 		$username = trim(strtolower($_POST['usuario']));
 		$passwd   = trim(strtolower($_POST['password']));
-		echo $username.' '.$passwd."<br>";
-		echo "es objeto:". is_object($this->model);
+		//echo $username.' '.$passwd."<br>";
+		//echo "es objeto:". is_object($this->model);
 		$data = $this->model->Validar($username, $passwd);
-		echo "<br>carga validar";
 		if($data['chkusu'] == 1)
 		{
-			echo "alf";
 			if($data['nivusu'] == 1)
 			{
-				echo "administrador";
 				$_SESSION['admin'] = $data['idlogin'];
 				$_SESSION['sessionActiva'] = "admin";
 	            header('location: ' . constant('URL') . 'admin/main/');

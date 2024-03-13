@@ -1,5 +1,6 @@
 <?php
 namespace iepsanluis\libs\conexion;
+
 class Conexion
 {
   private $conn;
@@ -9,7 +10,7 @@ class Conexion
     $host = constant('HOST');
     $user = constant('USER');
     $pass = constant('PASSWORD');
-    $db   = constant('HOST');
+    $db   = constant('DB');
 
     $this->conn = new \mysqli($host, $user, $pass, $db);
 
@@ -17,7 +18,7 @@ class Conexion
       echo "Error al contenctar a MySQL: (" . $this->conn->connect_errno . ") " . $this->conn->connect_error;
       exit();
     }
-    echo $this->conn->host_info . " colegio";
+    // echo $this->conn->host_info . " colegio";
     return $this->conn;
   }
 
