@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Admin</title>
 	<link rel="stylesheet" href="http://localhost/iepsanluis/admin/public/css/login.css">
-
+	<!-- ICONOS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 	<!-- Compressed CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
@@ -69,7 +69,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- <div class="row">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio aut veritatis debitis nesciunt officia voluptates alias, praesentium ut hic! Nulla laboriosam consequuntur excepturi explicabo dicta iusto delectus quis at?
 		Ex aut voluptates, repellendus nam aspernatur numquam eos. Iusto harum ut perferendis quam odit quis eligendi voluptate reiciendis quae quia velit possimus optio, sed expedita culpa saepe sit. Doloremque, in.
