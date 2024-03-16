@@ -1,6 +1,4 @@
 <?php
-namespace iepsanluis\config\config;
-
 $url = 'http://localhost/iepsanluis/';
 
 define('URL', $url);

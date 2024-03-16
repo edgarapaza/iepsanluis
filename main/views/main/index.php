@@ -1,10 +1,10 @@
-<?php require('main/views/header.php'); ?>
+<?php require ('main/views/header.php'); ?>
 
 <div class="grid-container">
   <div class="grid-x">
     <div class="cell">
       <div class="img-hero">
-        <img src="<?php echo constant('URL'); ?>public/img/hero1.png" alt="Logo IEP San Luis">
+        <img src="<?php echo constant('URL'); ?>main/public/img/hero1.png" alt="Logo IEP San Luis">
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
       <h3>BIENVENIDOS PAGINA PRINCIPAL</h3>
     </div>
     <div class="cell small-9 medium-4 large-4">
-      secretarios
+      Secretarios
       <a href="<?php echo "http://localhost/iepsanluis/admin/" ?>">admin</a>
       <a href="<?php echo "http://localhost/iepsanluis/estudiantes/" ?>">Estudiantes</a>
       <a href="<?php echo "http://localhost/iepsanluis/docentes/" ?>">Docentes</a>

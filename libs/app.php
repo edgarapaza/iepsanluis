@@ -10,6 +10,7 @@ class App
     $modulosDisponibles = array(
       "main", "estudiantes", "docentes", "admin"
     );
+
     // Verifica si hay un módulo especificado en la URL
     $modulo = (!empty($url[0])) ? $url[0] : 'main';
 
@@ -67,7 +68,7 @@ class App
           break;
       }
     } else {
-        if (!empty($url[0]) && sizeof($url) == 1) {
+      if (!empty($url[0]) && sizeof($url) == 1) {
         $archivoController = "{$modulo}/controller/login.php";
         $urlObject = "login";
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
@@ -77,7 +78,7 @@ class App
         $urlObject = "login";
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
       } else {
-        header("location: " . constant('URL'));
+        header("location: " . constant('URLMAIN'));
       }
     }
   }
@@ -91,6 +92,7 @@ class App
       $archivoController = "{$modulo}/controller/{$url[1]}.php";
       $urlObject = $url[1];
     }
+
     switch ($modulo) {
       case "admin":
         /* con function router */
