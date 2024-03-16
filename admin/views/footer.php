@@ -19,13 +19,13 @@
 
 
 <!--FOUNDATION JS-NECESARIO-->
-<script src="http://localhost/iepsanluis/admin/public/js/jquery.js"></script>
+<script src="<?php echo constant('URLADMIN') .'public/js/jquery.js' ?>"></script>
 <!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
-<script src="http://localhost/iepsanluis/admin/public/js/foundation.min.js"></script>
+<script src="<?php echo constant('URLADMIN') .'public/js/foundation.min.js' ?>"></script>
 <script>
   $(document).foundation();
 </script>
-<!--FOUNDATION JS-->
+<!--FOUNDATION JS END-->
 </body>
 
 </html>

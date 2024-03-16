@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="http://localhost/iepsanluis/admin/public/css/dashboard.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <div class="grid-container full">
-    <div class="grid-x grid-padding-x margin-3">
+    <div class="grid-x grid-padding-x margin-2">
         <!-- CONTENT-MAIN -->
-        <div class="cell smoll-12 medium-6 large-8">
+        <div class="cell smoll-12 medium-6 large-9">
             <!-- CARDS -->
             <div class="grid-x grid-margin-x large-up-3">
                 <div class="cell shadow card card-z">
@@ -48,8 +48,8 @@
         </div>
         <!-- CONTENT-MAIN-END -->
         <!-- CONTENT-RIGHT -->
-        <div class="cell smoll-12 medium-6 large-4 hide-for-small-only">
-            <div class="grid-x grid-padding-x margin-horizontal-2 right-content-z">
+        <div class="cell smoll-12 medium-6 large-3 hide-for-small-only">
+            <div class="grid-x grid-padding-x right-content-z">
                 <!-- CALENDAR -->
                 <div class="cell text-center margin-top-1">
                     <h4>Calendario</h4>
@@ -113,5 +113,5 @@
         <!-- CONTENT-RIGHT END-->
     </div>
     <script src="<?php echo constant('URLADMIN') . 'public/js/dashboard/dashboard.js' ?>"></script>
-</div>
+</div>  
 <?php require('admin/views/footer.php'); ?>

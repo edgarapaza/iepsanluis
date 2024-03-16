@@ -20,9 +20,9 @@ class Login extends Controller
 		//echo $username.' '.$passwd."<br>";
 		//echo "es objeto:". is_object($this->model);
 		$data = $this->model->Validar($username, $passwd);
-		if($data['chkusu'] == 1)
+		if($data['status'] == 1)
 		{
-			if($data['nivusu'] == 1)
+			if($data['tipo'] == 1)
 			{
 				$_SESSION['admin'] = $data['idlogin'];
 				$_SESSION['sessionActiva'] = "admin";

@@ -5,25 +5,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Admin</title>
-	<link rel="stylesheet" href="http://localhost/iepsanluis/admin/public/css/login.css">
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/login.css' ?>">
 	<!-- ICONOS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-	<!-- Compressed CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
-		crossorigin="anonymous">
-	<!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation-float.min.css"
-		crossorigin="anonymous">
-
-	<!-- foundation-prototype.min.css: Compressed CSS with prototyping classes -->
-	<link rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation-prototype.min.css"
-		crossorigin="anonymous">
-
-	<!-- foundation-rtl.min.css: Compressed CSS with right-to-left reading direction -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation-rtl.min.css"
-		crossorigin="anonymous">
-
+	<!-- FOUNDATION CSS-PRINCIPAL Y NECESARIO -->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation.css' ?>">
+	<!-- FOUNDATION FLOAT -->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation-float.css' ?>">
+	<!-- Foundation prototipe-algunas interesantes opciones a utilizar-->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation-prototype.css' ?>">
 </head>
 
 <body>
@@ -36,20 +26,23 @@
 						<p>Ingrese su usuario y contrasena</p>
 					</div>
 					<div class="cell padding-top-3">
-					
+
 						<form action="http://localhost/iepsanluis/admin/login/user" method="POST" class="form-z">
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-user"></i></span>
-								<input class="form-control margin-bottom-2" type="text" name="usuario" placeholder="Usuario">
+								<input class="form-control margin-bottom-2" type="text" name="usuario"
+									placeholder="Usuario">
 							</div>
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-eye-slash"></i></span>
-								<input class="form-control margin-bottom-1" type="password" name="password" placeholder="Password">
+								<input class="form-control margin-bottom-1" type="password" name="password"
+									placeholder="Password">
 							</div>
 							<div class="cell text-right margin-bottom-2">
 								<a href="#">¿Olvidaste tu contraseña?</a>
 							</div>
-							<button type="submit" name="submit" class="btn rounded bordered shadow success">Ingresar</button>
+							<button type="submit" name="submit"
+								class="btn rounded bordered shadow success">Ingresar</button>
 						</form>
 						<hr>
 						<div class="cell text-center">

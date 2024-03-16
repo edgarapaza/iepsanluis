@@ -13,7 +13,7 @@ define('URLMAIN', $url.'main/');
 define('COMPANY', 'IEP San Luis');
 define('HOST', 'localhost');
 define('USER', 'jersson');
-define('DB', 'katariDB');
+define('DB', 'colegio');
 define('PASSWORD', 'jersson');
 define('CHATSET', 'utf8');
 
