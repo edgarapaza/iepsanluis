@@ -7,7 +7,7 @@ class Model
   protected $conn;
   function __construct()
   {
-    #echo "<h1>Model Base</h1>";
+    //echo "<h5>Model Base</h5>";
     $this->conn = new Conexion();
   }
 }

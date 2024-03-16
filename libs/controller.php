@@ -15,6 +15,7 @@ class Controller
 
   function loadModel($model)
   {
+    //echo "<h3>entra para cargar el model del modulo</h3>";
     $url = $this->modulo.'/models/' . $model . "model.php";
     if (file_exists($url)) {
 

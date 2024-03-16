@@ -14,18 +14,16 @@ class Login extends Controller
 		$this->view->Render('login/index');
 	}
 	function user()
-	{
+	{   
 		$username = trim(strtolower($_POST['usuario']));
 		$passwd   = trim(strtolower($_POST['password']));
-		echo $username.' '.$passwd."<br>";
-		echo "es objeto:". is_object($this->model);
+		//echo $username.' '.$passwd."<br>";
+		//echo "es objeto:". is_object($this->model);
 		$data = $this->model->Validar($username, $passwd);
-
 		if($data['chkusu'] == 1)
 		{
 			if($data['nivusu'] == 1)
 			{
-				#echo "administrador";
 				$_SESSION['admin'] = $data['idlogin'];
 				$_SESSION['sessionActiva'] = "admin";
 	            header('location: ' . constant('URL') . 'admin/main/');

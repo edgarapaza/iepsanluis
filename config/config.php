@@ -1,13 +1,14 @@
 <?php
 namespace iepsanluis\config\config;
 
-define('URL', 'http://localhost/iepsanluis/');
+$url = 'http://localhost/iepsanluis/';
 
-define('URLADMIN', 'http://localhost/iepsanluis/');
-define('URLESTUDIANTES', 'http://localhost/iepsanluis/');
-define('URLDOCENTES', 'http://localhost/iepsanluis/');
-define('URLMAIN', 'http://localhost/iepsanluis/main/');
+define('URL', $url);
 
+define('URLADMIN', $url.'admin/');
+define('URLESTUDIANTES', $url.'estudiantes/');
+define('URLDOCENTES', $url.'docentes/');
+define('URLMAIN', $url.'main/');
 
 define('COMPANY', 'IEP San Luis');
 define('HOST', 'localhost');

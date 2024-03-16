@@ -1,6 +1,5 @@
 <?php
 namespace iepsanluis\libs\view;
-use iepsanluis\config\config;
 class View
 {
   public $mensaje;
@@ -9,7 +8,7 @@ class View
 
   function __construct()
   {
-    #echo "<h1>View Base</h1>";
+    //echo "<h2>View Base</h2>";
   }
 
   function Render($nombre)
