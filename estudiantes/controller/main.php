@@ -12,4 +12,12 @@ class Main extends Controller
 	{
 		$this->view->Render('main/index');
 	}
+
+	function salir()
+	{
+		session_destroy();
+		$_SESSION['alumno'] = "";
+		$_SESSION['sessionActiva'] = "";
+		$this->render('login/index');
+	}
 }

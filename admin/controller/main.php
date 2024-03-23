@@ -8,8 +8,19 @@ class Main extends Controller
 		parent::__construct();
 	}
 
+	function Salir()
+    {
+    	echo "Estamos en SALIR";
+    	session_destroy();
+    	echo $_SESSION['admin'] = "";
+    	echo $_SESSION['sessionActiva'] = "";
+        $this->view->Render('main/dashboard');
+    }
+
 	function render()
 	{
 		$this->view->Render('main/dashboard');
 	}
+
+
 }

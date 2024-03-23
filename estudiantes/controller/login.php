@@ -8,32 +8,36 @@ class Login extends Controller
 		parent::__construct();
 	}
 
-	function render()
-	{
-		$this->view->Render('login/index');
-	}
 	function user(){
-		$username = trim(strtolower($_POST['username']));
-		$passwd   = trim(strtolower($_POST['password']));
+		echo $username = trim(strtolower($_POST['usuario']));
+		echo $passwd   = trim(strtolower($_POST['passwd']));
+
 		$data = $this->model->Validar($username, $passwd);
 
-		if($data['chk_usu'] == 1)
+		if($data['status'] == 1)
 		{
-			if($data['niv_usu'] == 1)
+			if($data['nivel'] == 3)
 			{
-				#echo "administrador";
-				$_SESSION['katari'] = $data['id_personal'];
-				$persona = $this->model->NombrePersonal($data['id_personal']);
-	            $_SESSION['nombre'] = $persona['nombre'];
-	            $_SESSION['foto'] = $persona['foto'];
-	            header('location: ' . constant('URL') . 'dashboard');
+				$_SESSION['alumno'] = $data['id'];
+				$_SESSION['sessionActiva'] = "estudiantes";
+
+				$estudiante = $this->model->NombreAlumno($data['id']);
+
+	            $_SESSION['nombre'] = $estudiante['nombre'];
+	            $_SESSION['foto'] = $estudiante['foto'];
+	            header('location: ' . constant('URL') . 'estudiantes/main/');
 			}else{
-				$res = "No es administrador";
+				$res = "No corresponde a un alumno";
 			}
 		}else{
 			$res = "Usuario no reconocido o No está activo";
 		}
 		$this->view->mensaje = $res;
+		$this->view->Render('estudiantes/main');
+	}
+
+	function render()
+	{
 		$this->view->Render('login/index');
 	}
 }

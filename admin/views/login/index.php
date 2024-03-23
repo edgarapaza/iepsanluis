@@ -40,11 +40,11 @@
 						<form action="http://localhost/iepsanluis/admin/login/user" method="POST" class="form-z">
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-user"></i></span>
-								<input class="form-control margin-bottom-2" type="text" name="usuario" placeholder="Usuario">
+								<input class="form-control margin-bottom-2" type="text" name="usuario" placeholder="Usuario" value="admin">
 							</div>
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-eye-slash"></i></span>
-								<input class="form-control margin-bottom-1" type="password" name="password" placeholder="Password">
+								<input class="form-control margin-bottom-1" type="password" name="password" placeholder="Password" value="admin">
 							</div>
 							<div class="cell text-right margin-bottom-2">
 								<a href="#">¿Olvidaste tu contraseña?</a>

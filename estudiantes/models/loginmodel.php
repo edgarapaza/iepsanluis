@@ -15,9 +15,10 @@ class LoginModel extends Model
     return $data;
   }
 
-  public function NombrePersonal($idpersonal)
+  public function NombreAlumno($idalum)
   {
-    $sql = "SELECT CONCAT(nombre,' ', apellidos) as nombre, foto FROM personal WHERE id_personal =" .$idpersonal;
+    $sql = "SELECT idalumno, CONCAT(nombre,' ', apellidos) AS nombre, codigo, fecNacimiento, foto,ciudad, telefono, email, nombrepadre, telefonopadre, emailpadre FROM alumnos WHERE idalumno = ".$idalum." limit 1;";
+    echo $sql;
     $data = $this->conn->ConsultaArray($sql);
     return $data;
   }

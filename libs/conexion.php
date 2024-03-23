@@ -12,7 +12,7 @@ class Conexion
     $pass = constant('PASSWORD');
     $db   = constant('DB');
 
-    $this->conn = new mysqli($host, $user, $pass, $db);
+    $this->conn = new \mysqli($host, $user, $pass, $db);
 
     if ($this->conn->connect_errno) {
       echo "Error al contenctar a MySQL: (" . $this->conn->connect_errno . ") " . $this->conn->connect_error;

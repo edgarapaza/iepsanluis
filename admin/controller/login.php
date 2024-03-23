@@ -1,5 +1,6 @@
 <?php
 use iepsanluis\libs\controller\Controller;
+
 class Login extends Controller
 {
 
@@ -13,18 +14,22 @@ class Login extends Controller
 		//echo "render login";
 		$this->view->Render('login/index');
 	}
+
 	function user()
 	{   
 		$username = trim(strtolower($_POST['usuario']));
 		$passwd   = trim(strtolower($_POST['password']));
-		//echo $username.' '.$passwd."<br>";
-		//echo "es objeto:". is_object($this->model);
+
+		#echo $username.' '.$passwd."<br>";
+
 		$data = $this->model->Validar($username, $passwd);
-		if($data['chkusu'] == 1)
+
+		if($data['status'] == 1)
 		{
-			if($data['nivusu'] == 1)
+			echo "Activo";
+			if($data['nivel'] == 1)
 			{
-				$_SESSION['admin'] = $data['idlogin'];
+				$_SESSION['admin'] = $data['id'];
 				$_SESSION['sessionActiva'] = "admin";
 	            header('location: ' . constant('URL') . 'admin/main/');
 			}else{
@@ -35,6 +40,7 @@ class Login extends Controller
 		}
 		$this->view->Render('login/index');
 	}
+
 	function create(){
 		$username = $_POST['usuario'];
 		$password = $_POST['password'];
@@ -46,6 +52,7 @@ class Login extends Controller
 		}
 		$this->view->Render('login/index');
 	}
+
 	function ver($param = null)
     {
         $id = $param[0];

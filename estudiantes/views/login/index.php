@@ -117,13 +117,13 @@
 	</div>
 
 	<div class="inputGroup inputGroup1">
-		<label for="loginEmail" id="loginEmailLabel">Email</label>
-		<input type="text" id="loginEmail" maxlength="254" name="usuario"/>
-		<p class="helper helper1">email@domain.com</p>
+		<label for="usuario" id="usuario">Usuario</label>
+		<input type="text" id="usuario" maxlength="254" name="usuario" value="alumno" />
+
 	</div>
 	<div class="inputGroup inputGroup2">
 		<label for="loginPassword" id="loginPasswordLabel">Password</label>
-		<input type="password" id="loginPassword" name="password"/>
+		<input type="password" id="passwd" name="passwd" value="alumno"/>
 		<label id="showPasswordToggle" for="showPasswordCheck">Show
 			<input id="showPasswordCheck" type="checkbox"/>
 			<div class="indicator"></div>

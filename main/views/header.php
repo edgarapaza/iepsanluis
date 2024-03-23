@@ -24,10 +24,10 @@
     <div class="grid-x grid-margin-x">
       <div class="cell small-3">
         <a href="<?php echo constant('URL'); ?>main">
-          <img src="<?php echo constant('URL'); ?>public/img/logo.jpg" alt="Logo IEP San Luis" class="img-logo">
+          <img src="<?php echo constant('URL'); ?>main/public/img/logo.jpg" alt="Logo IEP San Luis" class="img-logo">
         </a>
       </div>
-      <div class="cell small-9" style="background-image: url('<?php echo constant('URL'); ?>public/img/menu.png') ;">
+      <div class="cell small-9" style="background-image: url('<?php echo constant('URL'); ?>main/public/img/menu.png') ;">
         <nav class="navegador">
           <ul>
             <li><a href="<?php echo constant('URL'); ?>main">Inicio</a></li>
