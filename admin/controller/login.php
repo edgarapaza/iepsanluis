@@ -59,7 +59,7 @@ class Login extends Controller
     $_SESSION["sessionActiva"] = "";
     $this->view->modulo = "main";
     $this->view->render("main/index");
-
+    return false;
   }
 
 }

@@ -10,7 +10,7 @@ class App
     $modulosDisponibles = array(
       "main", "estudiantes", "docentes", "admin"
     );
-    var_dump($url);
+    /*var_dump($url);*/
 
     // Verifica si hay un módulo especificado en la URL
     $modulo = (!empty($url[0])) ? $url[0] : 'main';

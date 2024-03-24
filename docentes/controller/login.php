@@ -12,4 +12,8 @@ class Login extends Controller
 	{
 		$this->view->Render('login/index');
 	}
+
+	function salir(){
+
+	}
 }
