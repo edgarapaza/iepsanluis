@@ -16,7 +16,7 @@ class Login extends Controller
 	}
 
 	function user()
-	{   
+	{
 		$username = trim(strtolower($_POST['usuario']));
 		$passwd   = trim(strtolower($_POST['password']));
 
@@ -53,13 +53,13 @@ class Login extends Controller
 		$this->view->Render('login/index');
 	}
 
-	function ver($param = null)
-    {
-        $id = $param[0];
-        $res = $this->model->getById($id);
+  function salir(){
+    session_destroy();
+    $_SESSION["admin"] = "";
+    $_SESSION["sessionActiva"] = "";
+    $this->view->modulo = "main";
+    $this->view->render("main/index");
 
-        $this->view->datos = $res;
-        $this->view->Render('login/ver');
-    }
-	
+  }
+
 }

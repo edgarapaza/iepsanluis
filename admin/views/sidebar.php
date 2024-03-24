@@ -90,7 +90,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo constant('URLADMIN'); ?>main/Salir">
+                                <a href="<?php echo constant('URLADMIN'); ?>login/salir">
                                     <i class="fas fa-sign-out-alt"></i>
                                     <span class="nav-item">Logout</span>
                                 </a>
