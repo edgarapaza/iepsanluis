@@ -53,19 +53,10 @@
 </div>
 
 
-<<<<<<< HEAD
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<!-- Compressed JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
-<script src="<?php echo constant('URL'); ?>public/js/main.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/foundation.min.js"></script>
-
-=======
 <!--FOUNDATION JS-NECESARIO-->
-<script src="<?php echo constant('URLMAIN') .'public/js/jquery.js' ?>"></script>
+<script src="<?php echo constant('URLMAIN') . 'public/js/jquery.js' ?>"></script>
 <!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
-<script src="<?php echo constant('URLMAIN') .'public/js/foundation.min.js' ?>"></script>
->>>>>>> fa1110fced5c0e38ee42bb33462bcd9585818e5c
+<script src="<?php echo constant('URLMAIN') . 'public/js/foundation.min.js' ?>"></script>
 <script>
   $(document).foundation();
 </script>
