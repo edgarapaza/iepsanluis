@@ -37,7 +37,7 @@ class App
       switch ($_SESSION["sessionActiva"]) {
         case "admin":
           if ($_SESSION['sessionActiva'] == "admin" && $modulo == "admin") {
-            $this->cargarModulo($modulo, $url, $urlObject);
+            @$this->cargarModulo($modulo, $url, $urlObject);
           } else {
             $archivoController = "{$modulo}/controller/login.php";
             $urlObject = "login";
@@ -46,7 +46,7 @@ class App
           break;
         case "estudiantes":
           if ($_SESSION['sessionActiva'] == "estudiantes" && $modulo == "estudiantes") {
-            $this->cargarModulo($modulo, $url, $urlObject);
+            @$this->cargarModulo($modulo, $url, $urlObject);
           } else {
             $archivoController = "{$modulo}/controller/login.php";
             $urlObject = "login";
@@ -55,7 +55,7 @@ class App
           break;
         case "docentes":
           if ($_SESSION['sessionActiva'] == "docentes" && $modulo == "docentes") {
-            $this->cargarModulo($modulo, $url, $urlObject);
+            @$this->cargarModulo($modulo, $url, $urlObject);
           } else {
             $archivoController = "{$modulo}/controller/login.php";
             $urlObject = "login";
@@ -79,7 +79,7 @@ class App
         $urlObject = "login";
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
       } else {
-        header("location: " . constant('URLMAIN'));
+        header("location: " . constant('URL'));
       }
     }
   }

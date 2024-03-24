@@ -112,6 +112,6 @@
         </div>
         <!-- CONTENT-RIGHT END-->
     </div>
-    <script src="<?php echo constant('URLADMIN') . 'public/js/dashboard.js' ?>"></script>
+    <script src="<?php echo constant('URLADMIN') . 'public/js/dashboard/dashboard.js' ?>"></script>
 </div>  
 <?php require('admin/views/footer.php'); ?>

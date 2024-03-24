@@ -3,10 +3,10 @@ $url = 'http://localhost/iepsanluis/';
 
 define('URL', $url);
 
-define('URLADMIN', $url.'admin/');
-define('URLESTUDIANTES', $url.'estudiantes/');
-define('URLDOCENTES', $url.'docentes/');
-define('URLMAIN', $url.'main/');
+define('URLADMIN', $url . 'admin/');
+define('URLESTUDIANTES', $url . 'estudiantes/');
+define('URLDOCENTES', $url . 'docentes/');
+define('URLMAIN', $url . 'main/');
 
 define('COMPANY', 'IEP San Luis');
 define('HOST', 'localhost');

@@ -5,19 +5,21 @@ body{
 .grid-container {
   font-family: "Poppins", sans-serif;
 }
+/*CARDS Z -----------------*/
 .card-z {
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
+  cursor: pointer;
 }
 .card-divider {
-  background-color: #fff;
+  background-color: transparent !important;
   padding: 0.2rem;
   position: relative;
+  color: var(--blue);
 }
 .card-divider h4 {
-  color: var(--blue);
   font-size: 5vh;
   font-weight: bold;
   border-bottom: var(--blue) solid 2px;
@@ -31,10 +33,28 @@ body{
 .card-section-z .fas {
   margin: 0 10%;
 }
-.card-section-z h3 {
+.card-section h3 {
   font-weight: bold;
   font-size: 3.2vh;
 }
+.card-z:hover > *{
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--gray);
+  transition: all 1000ms ease-in;
+  color: var(--sidebar-gray-light);
+  border-radius: 20px;
+}
+.card-z:hover{
+  border: #26155b solid 3px;
+  width: 100%;
+  text-decoration: none;
+  background-color: var(--blue);
+  transition: all 100ms ease-in;
+  color: var(--sidebar-gray-light);
+}
+/*CARS Z END----------------*/
+
 /* GRAFICO CENTRAL */
 .grafico-z{
     padding: 1vh;

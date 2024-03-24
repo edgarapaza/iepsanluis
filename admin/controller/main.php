@@ -19,7 +19,7 @@ class Main extends Controller
 
 	function render()
 	{
-		$this->view->Render('main/dashboard');
+		$this->view->Render('main/index');
 	}
 
 
