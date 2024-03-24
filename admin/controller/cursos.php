@@ -1,6 +1,6 @@
 <?php
 use iepsanluis\libs\controller\Controller; // Asegúrate de ajustar la ruta según tu estructura
-class Main extends Controller
+class Cursos extends Controller
 {
 
 	function __construct()
@@ -10,6 +10,6 @@ class Main extends Controller
 
 	function render()
 	{
-		$this->view->Render('main/index');
+		$this->view->Render('cursos/index');
 	}
 }

@@ -8,7 +8,7 @@ class View
 
   function __construct()
   {
-    //echo "<h2>View Base</h2>";
+    //$this->datos;
   }
 
   function Render($nombre)

@@ -5,15 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Admin</title>
-	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/login.css' ?>">
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="<?php echo constant('URLADMIN') . 'public/img/favicon.ico' ?>">
+	<!-- CSS-LOGIN -->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') . 'public/css/login.css' ?>">
+	<!-- FOUNDATION CSS-PRINCIPAL Y NECESARIO -->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') . 'public/foundation/css/foundation.css' ?>">
+	<!-- FOUNDATION FLOAT -->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN') . 'public/foundation/css/foundation-float.css' ?>">
+	<!-- Foundation prototipe-algunas interesantes opciones a utilizar-->
+	<link rel="stylesheet" href="<?php echo constant('URLADMIN').'public/foundation/css/foundation-prototype.css'?>">
 	<!-- ICONOS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-	<!-- FOUNDATION CSS-PRINCIPAL Y NECESARIO -->
-	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation.css' ?>">
-	<!-- FOUNDATION FLOAT -->
-	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation-float.css' ?>">
-	<!-- Foundation prototipe-algunas interesantes opciones a utilizar-->
-	<link rel="stylesheet" href="<?php echo constant('URLADMIN') .'public/css/foundation-prototype.css' ?>">
 </head>
 
 <body>
@@ -31,12 +34,12 @@
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-user"></i></span>
 								<input class="form-control margin-bottom-2" type="text" name="usuario"
-									placeholder="Usuario">
+									placeholder="Usuario" value="zeta">
 							</div>
 							<div class="input-box">
 								<span class="icon"><i class="fas fa-eye-slash"></i></span>
 								<input class="form-control margin-bottom-1" type="password" name="password"
-									placeholder="Password">
+									placeholder="Password" value="zeta">
 							</div>
 							<div class="cell text-right margin-bottom-2">
 								<a href="#">¿Olvidaste tu contraseña?</a>

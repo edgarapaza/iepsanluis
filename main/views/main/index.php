@@ -4,7 +4,7 @@
   <div class="grid-x">
     <div class="cell">
       <div class="img-hero">
-        <img src="<?php echo constant('URL'); ?>public/img/hero1.png" alt="Logo IEP San Luis">
+        <img src="<?php echo constant('URLMAIN'); ?>public/img/hero1.png" alt="Logo IEP San Luis">
       </div>
     </div>
   </div>

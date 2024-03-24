@@ -18,7 +18,7 @@ class Login extends Controller
 		$username = trim(strtolower($_POST['usuario']));
 		$passwd   = trim(strtolower($_POST['password']));
 		//echo $username.' '.$passwd."<br>";
-		//echo "es objeto:". is_object($this->model);
+		//echo "es objeto:". is_object($this->model);	
 		$data = $this->model->Validar($username, $passwd);
 		if($data['status'] == 1)
 		{
@@ -28,7 +28,7 @@ class Login extends Controller
 				$_SESSION['sessionActiva'] = "admin";
 	            header('location: ' . constant('URL') . 'admin/main/');
 			}else{
-				$res = "No es administrador";
+				echo $res = "No es administrador";
 			}
 		}else{
 			echo $res = "Usuario no reconocido o No está activo";
@@ -46,13 +46,14 @@ class Login extends Controller
 		}
 		$this->view->Render('login/index');
 	}
-	function ver($param = null)
-    {
-        $id = $param[0];
-        $res = $this->model->getById($id);
-
-        $this->view->datos = $res;
-        $this->view->Render('login/ver');
-    }
+	function salir(){
+		session_destroy();
+		$_SESSION['admin'] = "";
+		$_SESSION['sessionActiva'] = "";
+		// cambio de la variable que se encarga del modulo
+		// para despues usar el methodo render
+		$this->view->modulo = "main";
+		$this->view->render("main/index");
+	}
 	
 }

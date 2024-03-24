@@ -53,13 +53,14 @@
 </div>
 
 
-<script src="<?php echo constant('URL'); ?>public/js/core/jquery.min.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/main.js"></script>
-<script src="<?php echo constant('URL'); ?>public/js/foundation.min.js"></script>
-
+<!--FOUNDATION JS-NECESARIO-->
+<script src="<?php echo constant('URLMAIN') .'public/js/jquery.js' ?>"></script>
+<!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
+<script src="<?php echo constant('URLMAIN') .'public/js/foundation.min.js' ?>"></script>
 <script>
   $(document).foundation();
 </script>
+<!--FOUNDATION JS END-->
 </body>
 
 </html>

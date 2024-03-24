@@ -6,7 +6,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="grid-container">
-    <div class="grid-x">
+    <div class="grid-x align-center">
       <small class="copyright">
         <span class=""> ©
           2024 KATARI SOFTWARE
@@ -19,9 +19,8 @@
 
 
 <!--FOUNDATION JS-NECESARIO-->
-<script src="<?php echo constant('URLADMIN') .'public/js/jquery.js' ?>"></script>
 <!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
-<script src="<?php echo constant('URLADMIN') .'public/js/foundation.min.js' ?>"></script>
+<script src="<?php echo constant('URLADMIN') .'public/foundation/js/foundation.min.js' ?>"></script>
 <script>
   $(document).foundation();
 </script>
