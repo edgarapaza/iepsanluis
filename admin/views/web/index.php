@@ -5,7 +5,7 @@ require ('admin/views/header.php');
 
 <link rel="stylesheet" href="http://localhost/iepsanluis/admin/public/css/transportes.css">
 
-<!-- <body>
+<body>
   <div class="grid-container full">
     <div class="cell">
       <div class="title-bar">
@@ -112,7 +112,7 @@ require ('admin/views/header.php');
     </div>
     <script src="<?php echo constant('URLADMIN') . '' ?>"></script>
   </div>
-</body> -->
+</body>
 
 <body>
   <div class="grid-container full">

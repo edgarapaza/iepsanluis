@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
   <title>IPE San Luis Ilo</title>
       <!-- FOUNDATION CSS-PRINCIPAL Y NECESARIO -->
 	<link rel="stylesheet" href="<?php echo constant('URLMAIN') .'public/css/foundation.css' ?>">
