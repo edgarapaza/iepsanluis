@@ -11,7 +11,7 @@
 
   <div class="grid-x">
     <div class="cell small-9 medium-8 large-8">
-      <h3>BIENVENIDOS</h3>
+      <h3>BIENVENIDOS a todos gaaa</h3>
     </div>
     <div class="cell small-9 medium-4 large-4">
       DOICENTES

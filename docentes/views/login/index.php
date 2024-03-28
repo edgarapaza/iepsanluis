@@ -19,7 +19,7 @@
       <a href="<?php echo "http://localhost/iepsanluis/admin/login" ?>">login</a>
       <div class="form">
         <h1>LOGIN ESTUDIANTES</h1>
-        <form action="http://localhost/iepsanluis/admin/login/user" method="POST">
+        <form action="http://localhost/iepsanluis/docentes/login/user" method="POST">
           <label for="">USUARIO<input type="text" name="usuario" value="123"></label>
           <label for="">PASSWORD<input type="password" name="password" value="123"></label>
           <button type="submit">ENVIAR GAAAAAAAAAA</button>
