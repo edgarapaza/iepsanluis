@@ -25,7 +25,7 @@ class Docentes extends Controller
     $json = array();
     while ($row = mysqli_fetch_array($data)) {
       $json[] = array(
-        "foto" => $row['foto'],
+        "foto" => constant('URLADMIN').$row['foto'],
         "id" => $row['idmaestro'],
         "nombre" => $row['nombre'] . " " . $row['apellidos'],
         "especialidad" => $row['especialidad'],
@@ -38,8 +38,24 @@ class Docentes extends Controller
   public function update()
   {
     $id = $_POST['id'];
-    $resultado = $this->model->Update($id);
-    echo $resultado;
+    $foto = $_POST['foto'];
+    $acercade = $_POST['acercade'];
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellidos'];
+    $especialidad = $_POST['especialidad'];
+    $telefono = $_POST['telefono'];
+    $ciudad = $_POST['ciudad'];
+    $email = $_POST['email'];
+    $grado = $_POST['grado'];
+    $result = $this->validacionDatos(nombre:$nombre,apellido:$apellido,email:$email,telefono:$telefono,descripcion:$acercade,texto:$especialidad);
+    if ($result) {
+      $respuesta = $this->model->Update($id, $foto,$acercade,$nombre,$apellidos,$especialidad,$telefono,$ciudad,$email,$grado);  
+    }
+    if ($respuesta) {
+      echo 'actualizado correctamente';
+    } else {
+      echo 'error al actualizar al personal';
+    }
   }
   public function getById($param = null)
   {
@@ -86,7 +102,7 @@ class Docentes extends Controller
     while ($row = mysqli_fetch_array($data)) {
       $json[] = array(
         "id" => $row['idmaestro'],
-        "foto" => $row['foto'],
+        "foto" => constant('URLADMIN').$row['foto'],
         "nombre" => $row['nombre'] . " " . $row['apellidos'],
         "especialidad" => $row['especialidad'],
         "telefono" => $row['telefono'],

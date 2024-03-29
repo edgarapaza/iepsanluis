@@ -20,7 +20,7 @@
 
 <!--FOUNDATION JS-NECESARIO-->
 <!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
-<script src="<?php echo constant('URLADMIN') .'public/foundation/js/foundation.min.js' ?>"></script>
+<!-- <script src="<?php echo constant('URLADMIN') .'public/foundation/js/foundation.min.js' ?>"></script> -->
 <script src="<?php echo constant('URLADMIN') .'public/foundation/js/foundation.js' ?>"></script>
 <script>
   $(document).foundation();

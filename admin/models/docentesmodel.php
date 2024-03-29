@@ -13,8 +13,13 @@ class DocentesModel extends Model
         $data = $this->conn->ConsultaCon($sql);
         return $data;
     }
-    public function Update($data){
-        
+    public function Update($id, $foto,$acercade,$nombre,$apellidos,$especialidad,$telefono,$ciudad,$email,$grado){
+        $sql = "UPDATE maestros SET nombre = '$nombre', apellidos = '$apellidos',foto = '$foto',especialidad = '$especialidad', telefono = $telefono, ciudad = '$ciudad', email = '$email' WHERE idmaestro = $id;";
+        $sql .= "UPDATE maestros_detalle SET acercade = '$acercade' WHERE idmaestro = $id;";
+        $sql .= "UPDATE maestros_educacion SET grado = '$grado' WHERE idmaestro = $id;";
+        $response = $this->conn->ConsultaSin($sql);
+        return $response;
+
     }
     public function Delete($id){
         $sql = "DELETE FROM maestros WHERE idmaestro = '$id';";

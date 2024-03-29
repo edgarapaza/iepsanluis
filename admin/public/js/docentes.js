@@ -1,3 +1,4 @@
+
 mostrarTabla();
 $("#task-result").hide();
 // Configuración de paginación
@@ -25,7 +26,7 @@ function mostrarTabla() {
                     <td>${dato.telefono}</td>
                     <td>${dato.email}</td>
 
-                    <td><a href = "http://localhost/iepsanluis/admin/docentes/getById/${dato.id}" class="button editar-dato">Modificar</a></td>
+                    <td><a href = "http://localhost/iepsanluis/admin/docentes/getById/${dato.id}" class="button editar-dato">Detalles</a></td>
                     <td><button class="button alert eliminar">retirar</button></td>
                 </tr>
             `;
@@ -80,7 +81,7 @@ $("#buscar").keyup(function () {
                 <td>${dato.telefono}</td>
                 <td>${dato.email}</td>
 
-                <td><a href = "http://localhost/iepsanluis/admin/docentes/detalles/${dato.id}" class="button editar-dato">Modificar</a></td>
+                <td><a href = "http://localhost/iepsanluis/admin/docentes/detalles/${dato.id}" class="button editar-dato">Detalles</a></td>
                 <td><button class="button alert eliminar">retirar</button></td>
               </tr>
           `;
@@ -96,6 +97,52 @@ $("#buscar").keyup(function () {
     $("#task-result").hide();
   }
 });
+// EDITAR 
+$("#editar").click(function () {
+  // Activar el input
+  $("input:disabled").prop("disabled", false);
+  $("textarea:disabled").prop("disabled", false);
+});
+// GUARDAR 
+$("#guardar").click(function () {
+  update();
+});
+// ENVIAR DATOS PARA ACTUALIZAR
+function update(){
+  let id = $("#id").val(),
+  foto = $("#archivoInput").val(),
+  acercade = $("#acercade").val(),
+  nombre = $("#nombre").val(),
+  apellidos = $("#apellidos").val(),
+  especialidad = $("#especialidad").val(),
+  telefono = $("#telefono").val(),
+  ciudad = $("#ciudad").val(),
+  email = $("#email").val(),
+  grado = $("#grado").val();
+  if(foto == ""){
+    foto = $("#fotoprevia").attr("src");
+  }
+  $.ajax({
+    url: "http://localhost/iepsanluis/admin/docentes/update",
+    type: "POST",
+    data: {id,foto,acercade,nombre,especialidad,telefono,ciudad,email,grado},
+    success: function (response) {
+      console.log(response);
+    },
+    error: function (error) {
+      console.log("Este es un error: ",error);
+    },
+  });
+}
+
+
+
+
+
+
+
+
+
 
 // Paginacion Tables
 function crearControlesPaginacion(datos) {

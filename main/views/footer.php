@@ -54,9 +54,9 @@
 
 
 <!--FOUNDATION JS-NECESARIO-->
-<script src="<?php echo constant('URLMAIN') .'public/js/jquery.js' ?>"></script>
+<script src="<?php echo constant('URLMAIN') . 'public/foundation/js/jquery.js' ?>"></script>
 <!-- <script src="http://localhost/iepsanluis/admin/public/js/what-input.js"></script> -->
-<script src="<?php echo constant('URLMAIN') .'public/js/foundation.min.js' ?>"></script>
+<script src="<?php echo constant('URLMAIN') . 'public/foundation/js/foundation.min.js' ?>"></script>
 <script>
   $(document).foundation();
 </script>
