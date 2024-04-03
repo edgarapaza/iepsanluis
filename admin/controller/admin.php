@@ -1,8 +1,6 @@
 <?php
 
-use iepsanluis\libs\controller\Controller;
-
-class Login extends Controller
+class Admin extends Controller
 {
 
   function __construct()
@@ -18,8 +16,8 @@ class Login extends Controller
 
   function user()
   {
-    $username = trim(strtolower($_POST['usuario']));
-    $passwd   = trim(strtolower($_POST['password']));
+    echo $username = trim(strtolower($_POST['usuario']));
+    echo $passwd   = trim(strtolower($_POST['password']));
     //echo $username.' '.$passwd."<br>";
     //echo "es objeto:". is_object($this->model);
     $data = $this->model->Validar($username, $passwd);
@@ -51,12 +49,9 @@ class Login extends Controller
   }
   function salir()
   {
+    echo "En salir";
     session_destroy();
-    $_SESSION['admin'] = "";
-    $_SESSION['sessionActiva'] = "";
-    // cambio de la variable que se encarga del modulo
-    // para despues usar el methodo render
-    $this->view->modulo = "main";
-    $this->view->render("main/index");
+    $_SESSION['rol'] = "";
+    $this->view->Render('web/index');
   }
 }

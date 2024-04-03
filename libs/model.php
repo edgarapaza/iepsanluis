@@ -1,13 +1,12 @@
 <?php
-namespace iepsanluis\libs\model;
 
-use iepsanluis\libs\conexion\Conexion;
 class Model
 {
-  protected $conn;
+  public $conn;
+
   function __construct()
   {
-    //echo "<h5>Model Base</h5>";
+    #echo "<h1>Model Base</h1>";
     $this->conn = new Conexion();
   }
 }

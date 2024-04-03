@@ -1,5 +1,5 @@
 <?php
-use iepsanluis\libs\controller\Controller;
+
 class ErrorGeneral extends Controller
 {
 

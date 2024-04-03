@@ -4,11 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IPE San Luis Ilo</title>
-  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/foundation.css">
-  <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/header.css">
-
-  <!-- If you are using the gem version, you need this only -->
+  <title>Colegio -  Docente</title>
+  <link rel="stylesheet" href="<?php echo constant('URLDOCENTES'); ?>public/css/foundation.css">
+  <link rel="stylesheet" href="<?php echo constant('URLDOCENTES'); ?>public/css/header.css">
 
   <!-- Insert this within your head tag and after foundation.css -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
@@ -19,27 +17,8 @@
 </head>
 
 <body>
+<div class="grid-x">
+      <div class="cell small-12 medium-6 large-6">
 
-  <div class="grid-container">
-    <div class="grid-x grid-margin-x">
-      <div class="cell small-3">
-        <a href="<?php echo constant('URL'); ?>main">
-          <img src="<?php echo constant('URL'); ?>public/img/logo.jpg" alt="Logo IEP San Luis" class="img-logo">
-        </a>
       </div>
-      <div class="cell small-9" style="background-image: url('<?php echo constant('URL'); ?>public/img/menu.png') ;">
-        <nav class="navegador">
-          <ul>
-            <li><a href="<?php echo constant('URL'); ?>main">Inicio</a></li>
-            <li><a href="<?php echo constant('URL'); ?>nosotros">Nosotros</a></li>
-            <li><a href="<?php echo constant('URL'); ?>propuesta">Propuesta educativa</a></li>
-            <li><a href="<?php echo constant('URL'); ?>galeria">Galeria</a></li>
-            <li class="activate"><a href="<?php echo constant('URL'); ?>contacto">
-                <i class="fa-solid fa-phone"></i>
-                Contacto
-              </a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
+</div>

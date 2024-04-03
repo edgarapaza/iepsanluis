@@ -10,7 +10,7 @@ class App
     $modulosDisponibles = array(
       "main", "estudiantes", "docentes", "admin"
     );
-    /*var_dump($url);*/
+    var_dump($url);
 
     // Verifica si hay un módulo especificado en la URL
     $modulo = (!empty($url[0])) ? $url[0] : 'main';
@@ -69,6 +69,7 @@ class App
           break;
       }
     } else {
+      echo "Sin sesion activada";
       if (!empty($url[0]) && sizeof($url) == 1) {
         $archivoController = "{$modulo}/controller/login.php";
         $urlObject = "login";
@@ -109,8 +110,8 @@ class App
         $this->cargarController($archivoController, $modulo, $url, $urlObject);
         break;
       default:
-        require_once("main/controller/main.php");
-        $controller = new main();
+        require_once(constant('URLADMIN')."main/controller/main.php");
+        $controller = new Main();
         $controller->view->modulo = 'main';
         $controller->render();
         break;

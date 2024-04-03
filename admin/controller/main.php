@@ -1,5 +1,5 @@
 <?php
-use iepsanluis\libs\controller\Controller; // Asegúrate de ajustar la ruta según tu estructura
+
 class Main extends Controller
 {
 
@@ -7,15 +7,6 @@ class Main extends Controller
 	{
 		parent::__construct();
 	}
-
-	function Salir()
-    {
-    	echo "Estamos en SALIR";
-    	session_destroy();
-    	echo $_SESSION['admin'] = "";
-    	echo $_SESSION['sessionActiva'] = "";
-        $this->view->Render('main/dashboard');
-    }
 
 	function render()
 	{

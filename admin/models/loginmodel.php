@@ -1,5 +1,5 @@
 <?php
-use iepsanluis\libs\model\Model; 
+
 class LoginModel extends Model
 {
   function __construct()

@@ -1,6 +1,6 @@
 <?php
-use iepsanluis\libs\model\Model; 
-class DocentesModel extends Model
+
+class MainModel extends Model
 {
     function __construct(){
         parent::__construct();

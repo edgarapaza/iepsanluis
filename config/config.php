@@ -6,7 +6,7 @@ define('URL', $url);
 define('URLADMIN', $url . 'admin/');
 define('URLESTUDIANTES', $url . 'estudiantes/');
 define('URLDOCENTES', $url . 'docentes/');
-define('URLMAIN', $url . 'main/');
+define('URLWEB', $url . 'web/');
 
 define('COMPANY', 'IEP San Luis');
 define('HOST', 'localhost');

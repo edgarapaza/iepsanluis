@@ -1,6 +1,4 @@
 <?php
-namespace iepsanluis\libs\conexion;
-
 class Conexion
 {
   private $conn;
@@ -12,7 +10,7 @@ class Conexion
     $pass = constant('PASSWORD');
     $db   = constant('DB');
 
-    $this->conn = new \mysqli($host, $user, $pass, $db);
+    $this->conn = new mysqli($host, $user, $pass, $db);
 
     if ($this->conn->connect_errno) {
       echo "Error al contenctar a MySQL: (" . $this->conn->connect_errno . ") " . $this->conn->connect_error;
@@ -28,7 +26,7 @@ class Conexion
     try {
       $this->conn->query($sql);
       $res = TRUE;
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
       echo 'Excepción: ',  $e->getMessage();
       $res = FALSE;
     }
@@ -42,7 +40,7 @@ class Conexion
     # Sirve para: SELECT
     try {
       $result = $this->conn->query($sql);
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
       echo 'Excepción: ',  $e->getMessage();
     }
 
@@ -55,7 +53,7 @@ class Conexion
     # Sirve para: SELECT convertido en array
     try {
       $result = $this->conn->query($sql);
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
       echo 'Excepción: ',  $e->getMessage();
     }
 

@@ -1,5 +1,5 @@
 <?php
-use iepsanluis\libs\controller\Controller; // Asegúrate de ajustar la ruta según tu estructura
+
 class Main extends Controller
 {
 

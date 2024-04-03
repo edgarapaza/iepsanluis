@@ -1,7 +1,5 @@
 <?php
 
-use iepsanluis\libs\controller\Controller;
-
 class Docentes extends Controller
 {
   function __construct()

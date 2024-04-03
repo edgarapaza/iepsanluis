@@ -1,5 +1,4 @@
 <?php 
-use iepsanluis\libs\controller\Controller;
 class Web extends Controller
 {
     function __construct(){

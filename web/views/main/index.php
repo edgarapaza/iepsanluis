@@ -1,14 +1,10 @@
-<?php require ('main/views/header.php'); ?>
+<?php require ('web/views/header.php'); ?>
 
 <div class="grid-container">
   <div class="grid-x">
     <div class="cell">
       <div class="img-hero">
-<<<<<<< HEAD
-        <img src="<?php echo constant('URL'); ?>main/public/img/hero1.png" alt="Logo IEP San Luis">
-=======
-        <img src="<?php echo constant('URLMAIN'); ?>public/img/hero1.png" alt="Logo IEP San Luis">
->>>>>>> fa1110fced5c0e38ee42bb33462bcd9585818e5c
+        <img src="<?php echo constant('URLWEB'); ?>public/img/hero1.png" alt="Logo IEP San Luis">
       </div>
     </div>
   </div>
@@ -29,4 +25,4 @@
   </div>
 </div>
 
-<?php require('main/views/footer.php'); ?>
+<?php require('web/views/footer.php'); ?>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -33,11 +33,11 @@
             <form action="http://localhost/iepsanluis/admin/login/user" method="POST" class="form-z">
               <div class="input-box">
                 <span class="icon"><i class="fas fa-user"></i></span>
-                <input class="form-control margin-bottom-2" type="text" name="usuario" placeholder="Usuario" value="zeta">
+                <input class="form-control margin-bottom-2" type="text" name="usuario" placeholder="Usuario" value="admin">
               </div>
               <div class="input-box">
                 <span class="icon"><i class="fas fa-eye-slash"></i></span>
-                <input class="form-control margin-bottom-1" type="password" name="password" placeholder="Password" value="zeta">
+                <input class="form-control margin-bottom-1" type="password" name="password" placeholder="Password" value="admin">
               </div>
               <div class="cell text-right margin-bottom-2">
                 <a href="#">¿Olvidaste tu contraseña?</a>
@@ -64,15 +64,6 @@
   </div>
   <!-- <div class="row">
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio aut veritatis debitis nesciunt officia voluptates alias, praesentium ut hic! Nulla laboriosam consequuntur excepturi explicabo dicta iusto delectus quis at?
-		Ex aut voluptates, repellendus nam aspernatur numquam eos. Iusto harum ut perferendis quam odit quis eligendi voluptate reiciendis quae quia velit possimus optio, sed expedita culpa saepe sit. Doloremque, in.
-		Obcaecati vero minima facilis fugit blanditiis in repellendus similique atque ab veritatis iusto sed omnis dolores debitis ad illum vel eaque ipsa officiis maiores, tempora recusandae. Libero, quidem quo. Aut?
-		At repudiandae hic fugiat repellendus cupiditate est commodi tempora exercitationem eligendi, numquam dolorum dolor nam, veniam mollitia rerum provident placeat minus non perferendis velit molestiae. Ab ad incidunt dolore deserunt.
-		Quas cum, laboriosam nulla minima quod perferendis laudantium? Impedit quasi labore ipsum asperiores consequatur, et dicta odit nesciunt reprehenderit. Cumque minima magni quas sequi quo adipisci aspernatur temporibus, incidunt ad.
-		Quam facere obcaecati iusto recusandae veniam dicta quasi numquam praesentium repellat ad odit magnam doloremque vitae delectus rerum, id odio amet quidem quo consectetur quae. Cum exercitationem distinctio animi sed!
-		Velit quos voluptatibus deserunt molestiae rerum quo numquam exercitationem veniam animi explicabo? Corrupti quam cupiditate rerum a! Aperiam in id dolor quidem architecto, vel beatae consectetur obcaecati necessitatibus, voluptate corrupti.
-		Veniam sint eaque quo. Nostrum beatae deserunt alias unde animi soluta, fuga iusto minus dolorum aperiam. Dolorum velit nostrum nam voluptas neque ab, maiores deleniti sunt, tenetur temporibus, nesciunt saepe?
-		Reprehenderit quaerat odit ex at quibusdam minus odio dolore corporis facilis quidem alias ad nesciunt animi magnam amet, ab dolorum porro obcaecati a aliquid asperiores dolores fugit? Vitae, exercitationem facilis.
-		Facilis neque nihil voluptate eveniet blanditiis modi libero sapiente temporibus, eius sed explicabo, voluptatum qui esse! Est, repudiandae voluptate expedita officia laudantium iure mollitia sit animi sed vero rem officiis?
 	</div> -->
 </body>
 

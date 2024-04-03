@@ -1,18 +1,22 @@
 <?php
-namespace iepsanluis\libs\view;
 class View
 {
   public $mensaje;
-  public $modulo;
   public $datos;
 
   function __construct()
   {
-    //$this->datos;
+    #echo "<h1>View Base</h1>";
   }
 
-  function Render($nombre)
+  function render($nombre)
   {
-    require $this->modulo.'/views/' . $nombre . '.php';
+    $rol = $_SESSION['rol'];
+    if (empty($rol)) {
+      require 'web/views/' . $nombre . '.php';
+    }else{
+      require $rol.'/views/' . $nombre . '.php';
+    }
   }
+
 }

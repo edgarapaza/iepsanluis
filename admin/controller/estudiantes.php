@@ -1,5 +1,5 @@
 <?php 
-use iepsanluis\libs\controller\Controller;
+
 class Estudiantes extends Controller
 {
     function __construct(){
