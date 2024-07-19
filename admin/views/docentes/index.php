@@ -32,7 +32,7 @@
           </div>
           <div class="card-section card-section-z">
             <i class="fas fa-sack-dollar"></i>
-            <h3>Nuevo Docente</h3>
+            <h3><a href="<?php echo constant("URLADMIN").'docentes/crear'?>">Nuevo Docente</a></h3>
           </div>
         </div>
       </div>

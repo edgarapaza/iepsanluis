@@ -111,6 +111,7 @@ $("#guardar").click(function () {
 function update(){
   let id = $("#id").val(),
   foto = $("#archivoInput").val(),
+  ruta = $("#fotoprevia").attr("src"),
   acercade = $("#acercade").val(),
   nombre = $("#nombre").val(),
   apellidos = $("#apellidos").val(),
@@ -119,13 +120,10 @@ function update(){
   ciudad = $("#ciudad").val(),
   email = $("#email").val(),
   grado = $("#grado").val();
-  if(foto == ""){
-    foto = $("#fotoprevia").attr("src");
-  }
   $.ajax({
     url: "http://localhost/iepsanluis/admin/docentes/update",
     type: "POST",
-    data: {id,foto,acercade,nombre,especialidad,telefono,ciudad,email,grado},
+    data: {id,foto,ruta,acercade,nombre,apellidos,especialidad,telefono,ciudad,email,grado},
     success: function (response) {
       console.log(response);
     },

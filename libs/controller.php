@@ -31,14 +31,14 @@ class Controller
   //IMPORTANTE
   //Esta Funcion solo valida datos, Devuelve true si todos los datos son validos, no modifica los datos pasados
   //Funcion global para que Todos los demas Controladores puedan validar datos
-  function validacionDatos($nombre = null, $apellido = null, $direccion = null, $dni = null, $email = null, $telefono = null, $sexo = null, $fecha = null, $descripcion = null, $texto = null, $numeros = null)
+  function validacionDatos($nombre = null, $apellido = null, $direccion = null, $dni = null, $email = null, $telefono = null, $sexo = null, $fecha = null, $descripcion = null, $textos = null, $numeros = null)
   {
     // fecha Formato YYYY-MM-DD
     $patronesValidos = array(
       "caracteres" => "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/",
       "textos" => "/^[A-Za-z0-9ÁÉÍÓÚáéíóúÜüÑñ\s.,;:¡!¿?@#$%^&*()-_+=<>]+$/",
       "dni" => "/^[0-9]{8}$/",
-      "email" =>  "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/",
+      "email" => "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/",
       "telefono" => "/^[0-9()+-]+$/",
       "fecha" => "/^\d{4}-\d{2}-\d{2}$/",
       "genero" => ["masculino", "femenino"],
@@ -106,13 +106,27 @@ class Controller
       }
     }
     if ($fecha == !null) {
-      $fechaStr = strtotime($fecha);
-      $anio = date('Y', $fechaStr);
-      $patronCoincidencia = preg_match($patronesValidos['fecha'], $fecha);
-      if ($patronCoincidencia) {
-        $validacion["fecha"] = true;
+      $result = is_array($fecha);
+      if ($result) {
+        for ($i = 0; $i < count($fecha); $i++) {
+          // $fechaStr = strtotime($fecha);
+          // $anio = date('Y', $fechaStr);
+          $patronCoincidencia = preg_match($patronesValidos['fecha'], $fecha[$i]);
+          if ($patronCoincidencia) {
+            $validacion["fecha" . $i] = true;
+          } else {
+            $validacion["fecha" . $i] = false;
+          }
+        }
       } else {
-        $validacion["fecha"] = false;
+        // $fechaStr = strtotime($fecha);
+        // $anio = date('Y', $fechaStr);
+        $patronCoincidencia = preg_match($patronesValidos['fecha'], $fecha);
+        if ($patronCoincidencia) {
+          $validacion["fecha"] = true;
+        } else {
+          $validacion["fecha"] = false;
+        }
       }
     }
     if ($descripcion == !null) {
@@ -123,20 +137,45 @@ class Controller
         $validacion["descripcion"] = false;
       }
     }
-    if ($texto == !null) {
-      $patronCoincidencia = preg_match($patronesValidos['textos'], $texto);
-      if ($patronCoincidencia && strlen($texto) < 100) {
-        $validacion["texto"] = true;
+    if ($textos == !null) {
+      $result = is_array($textos);
+      if ($result) {
+        for ($i = 0; $i < count($textos); $i++) {
+          $patronCoincidencia = preg_match($patronesValidos['textos'], $textos[$i]);
+          if ($patronCoincidencia && strlen($textos[$i]) < 100) {
+            $validacion["texto" . $i] = true;
+          } else {
+            $validacion["texto" . $i] = false;
+          }
+        }
       } else {
-        $validacion["texto"] = false;
+        $patronCoincidencia = preg_match($patronesValidos['textos'], $textos);
+        if ($patronCoincidencia && strlen($textos) < 100) {
+          $validacion["texto"] = true;
+        } else {
+          $validacion["texto"] = false;
+        }
       }
+
     }
     if ($numeros == !null) {
-      $patronCoincidencia = preg_match($patronesValidos['numeros'], $numeros);
-      if ($patronCoincidencia && strlen($numeros) < 20) {
-        $validacion["numeros"] = true;
+      $result = is_array($numeros);
+      if ($result) {
+        for ($i = 0; $i < count($numeros); $i++) {
+          $patronCoincidencia = preg_match($patronesValidos['numeros'], $numeros[$i]);
+          if ($patronCoincidencia && strlen($numeros[$i]) < 20) {
+            $validacion["numeros" . $i] = true;
+          } else {
+            $validacion["numeros" . $i] = false;
+          }
+        }
       } else {
-        $validacion["numeros"] = false;
+        $patronCoincidencia = preg_match($patronesValidos['numeros'], $numeros);
+        if ($patronCoincidencia && strlen($numeros) < 20) {
+          $validacion["numeros"] = true;
+        } else {
+          $validacion["numeros"] = false;
+        }
       }
     }
     // cuenta los valores repetidos de un array- colo debe existir 1: true o false
@@ -152,4 +191,47 @@ class Controller
       return false;
     }
   }
+  // Los parametros son:
+  //FILE=> el archivo subido
+  //MODULO=> nombre del modulo(solo nombre)
+  //NOMBRE=> nombre del archivo, puede ser nombre del usuario o apellido lo que mejor convenga
+  //ID=> un Identificador unico, Id de la base de datos o un numero especial
+  function subirFoto($file, $modulo, $nombre, $id)
+  {
+    // archivo subido, nombre temporal
+    $temporal = $file['tmp_name'];
+    // La ruta de la carpeta: CARPETA FOTO 'nombre' 'id'
+    $rutaCarpeta = $_SERVER['DOCUMENT_ROOT'] . "/iepsanluis" . '/' . $modulo . "/public/img/Foto:" . $nombre . $id;
+    //TAMAÑO Y TIPOS DE ARCHIVOS
+    $tamanoMaximo = 15 * 1024 * 1024;
+    // Extenciones Permitidas
+    $archivosPermitidos = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'];
+    // la extencion del archivo subido
+    $extensionArchivo = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    // Verifica si la extencion esta permitida  
+    $resultadoExtension = in_array($extensionArchivo, $archivosPermitidos);
+    // Verifica si existe la carpeta
+    if (file_exists($rutaCarpeta) && !empty($file) && $file['error'] == 0 && $resultadoExtension && $tamanoMaximo >= $file['size']) {
+      // Ruta del archivo subido
+      $ruta = $rutaCarpeta . '/' . $file['name'];
+      // Verifica si se subio el archivo correctamente
+      return move_uploaded_file($temporal, $ruta) ? str_replace($_SERVER['DOCUMENT_ROOT'] . '/iepsanluis' . '/' . $modulo, '', $ruta) : false;
+    }
+    // Verifica al archivo
+    if (!empty($file) && $file['error'] == 0 && $resultadoExtension && $tamanoMaximo >= $file['size']) {
+      //Crear la carpeta para el usuario en cuestion
+      $result = mkdir('Foto:' . $nombre . $id, 0777) ? rename('Foto:' . $nombre . $id, $rutaCarpeta) : false;
+      if ($result) {
+        // Ruta del archivo subido
+        $ruta = $rutaCarpeta . '/' . $file['name'];
+        // Verifica si se subio el archivo correctamente
+        return move_uploaded_file($temporal, $ruta) ? str_replace($_SERVER['DOCUMENT_ROOT'] . '/iepsanluis' . '/' . $modulo, '', $ruta) : false;
+      } else {
+        return false;
+      }
+    } else {
+      return "El tamano es incorrecto o la extencion no es permitida";
+    }
+  }
+
 }
