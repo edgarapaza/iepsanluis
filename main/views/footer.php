@@ -1,6 +1,7 @@
 <!-- Pie de pagina -->
 <div class="grid-container-fluid foot-er">
   <div class="grid-container">
+    <hr>
     <div class="grid-x grid-padding-y">
       <div class="cell small-12 medium-4 large-3 titulo-footer">
         <h3>Herramientas y servicios</h3>
@@ -49,6 +50,7 @@
         <a href="<?php echo constant('URL'); ?>sitemap">Sitemap</a>
       </div>
     </div>
+    <hr>
   </div>
 </div>
 
